@@ -15,7 +15,7 @@ Literal Characters (literally this character only):
 Meta Characters (any character of this kind, or in this range):
 \d  =  any digit 0-9
 \w  =  any letter or number A-Za-z0-9 (word character)
-\s  =  any whitespace (but not a <br> unless scoped)
+\s  =  any whitespace (but not a <br> unless scoped)    
 \D  =  not a digit
 \W  =  anything that is not a letter or number (!word character)
 \S  =  anything that is not a whitespace
@@ -64,8 +64,6 @@ console.log(theTags);
 theTags.forEach(function(element, i, obj) {
     if (element.match(boolHref)) {
        obj.splice(i,1)
-       // let newElement = element.slice(8, -1)
-       // theTags.push(newElement)
        let result = element.replace(boolHref, '')
        theTags.push(result)
     }
